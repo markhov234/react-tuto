@@ -53,7 +53,12 @@ function App() {
       <h1>Hello from react</h1>
       {/* <h2>Hello {name}</h2> */}
       {/* <h3>Hello { x ? 'yes' : 'no'}</h3> */}
-      ­<Header title="Hello" onAdd={() => setShowAddTask(!showAddTask)} />
+      ­
+      <Header
+        title="Hello"
+        onAdd={() => setShowAddTask(!showAddTask)}
+        showAdd={showAddTask}
+      />
       {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder} />
